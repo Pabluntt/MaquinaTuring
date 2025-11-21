@@ -1,0 +1,124 @@
+[gd_scene load_steps=15 format=3 uid="uid://p3v651x7lm6q"]
+
+[ext_resource type="PackedScene" uid="uid://d1cn2a6nofayn" path="res://cilindro_estados.tscn" id="1_d4hm8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4xowi"]
+size = Vector3(5, 2.5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a202f"]
+albedo_color = Color(0.29523656, 0.29523656, 0.29523656, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_noarx"]
+radius = 1.25
+section_length = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+albedo_color = Color(0, 0.34960625, 0.53985995, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
+size = Vector3(0.2, 1.25, 0.2)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_2ohfs"]
+radius = 0.25
+section_length = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ohfs"]
+albedo_color = Color(0, 0.48557895, 3.85046e-07, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2ohfs"]
+top_radius = 0.3
+bottom_radius = 0.3
+height = 0.025
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4hm8"]
+albedo_color = Color(2.2140146e-06, 0, 0.6662291, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xhvlk"]
+top_radius = 0.3
+bottom_radius = 0.3
+height = 0.025
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dl7j"]
+albedo_color = Color(0.50074106, 1.2153015e-06, 1.4439226e-07, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_d4hm8"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhvlk"]
+albedo_color = Color(0.44752336, 0.4475239, 0, 1)
+
+[node name="Cabezal" type="Node3D"]
+
+[node name="Cabezal" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_4xowi")
+surface_material_override/0 = SubResource("StandardMaterial3D_a202f")
+
+[node name="engranaje" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2.7448778, -1.2504017, 0)
+mesh = SubResource("TubeTrailMesh_noarx")
+surface_material_override/0 = SubResource("StandardMaterial3D_a0tk4")
+
+[node name="unionCadena" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1511089, 1.3953526)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="unionCadena2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.528789, -1.8760841, 1.3953526)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="unionCadena3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1486684, -1.3971944)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="unionCadena4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52953, -1.8730133, -1.3971944)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="engranajeReceptor0" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.99944, -1.2775215, 0)
+mesh = SubResource("TubeTrailMesh_2ohfs")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ohfs")
+
+[node name="engranajeReceptor1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5019433, -1.0422322, 0)
+mesh = SubResource("TubeTrailMesh_2ohfs")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ohfs")
+
+[node name="mecanismoLectura0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.305557, -1.2629194, 0)
+
+[node name="imanCaraRepele0" type="MeshInstance3D" parent="mecanismoLectura0"]
+mesh = SubResource("CylinderMesh_2ohfs")
+surface_material_override/0 = SubResource("StandardMaterial3D_d4hm8")
+
+[node name="imanCaraAtrae0" type="MeshInstance3D" parent="mecanismoLectura0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025549889, 0)
+mesh = SubResource("CylinderMesh_xhvlk")
+surface_material_override/0 = SubResource("StandardMaterial3D_5dl7j")
+
+[node name="mecanismoLectura1" type="Node3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -2.4850872, -0.5753169, 0)
+
+[node name="imanCaraRepele1" type="MeshInstance3D" parent="mecanismoLectura1"]
+mesh = SubResource("CylinderMesh_2ohfs")
+surface_material_override/0 = SubResource("StandardMaterial3D_d4hm8")
+
+[node name="imanCaraAtrae1" type="MeshInstance3D" parent="mecanismoLectura1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025549889, 0)
+mesh = SubResource("CylinderMesh_xhvlk")
+surface_material_override/0 = SubResource("StandardMaterial3D_5dl7j")
+
+[node name="lectorExtremoDer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.898939, -0.94208205, -1.5421152)
+mesh = SubResource("CylinderMesh_d4hm8")
+surface_material_override/0 = SubResource("StandardMaterial3D_xhvlk")
+
+[node name="lectorExtremoIzq" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.898939, -0.94208205, 1.5487082)
+mesh = SubResource("CylinderMesh_d4hm8")
+surface_material_override/0 = SubResource("StandardMaterial3D_xhvlk")
+
+[node name="cilindroEstadosSuma" parent="." instance=ExtResource("1_d4hm8")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.2618575, 4.323815, -2.4310164)

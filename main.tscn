@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0prpb2c4yub6"]
+
+[ext_resource type="Script" uid="uid://wg5srihpf6ua" path="res://GDScript.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cg86kofst4lv6" path="res://celda_cinta_movible.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://y4lt2byjayqo" path="res://cinta_tope.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://jd5it5af7bfk" path="res://sistema_movimiento.tscn" id="4_1bvp3"]
+
+[node name="MaquinaTuring" type="Node3D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.66144276, 0, 0.74999565, 0, 1, 0, -0.74999565, 0, 0.66144276, 14.143178, 5.2175775, 63.309357)
+fov = 95.248505
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Camera3D"]
+transform = Transform3D(-0.24157315, 0.20369425, -0.9487629, -0.17977403, 0.9514011, 0.25003457, 0.9535847, 0.23096454, -0.19321403, -9.907742, 2.5480986, -24.710379)
+
+[node name="Cinta_tope" parent="." instance=ExtResource("3_1bvp3")]
+
+[node name="Cinta_tope2" parent="." instance=ExtResource("3_1bvp3")]
+transform = Transform3D(1, -8.742278e-08, 0, 8.742278e-08, 1, 0, 0, 0, -1, 0, 0, 57)
+
+[node name="SistemaMovimiento" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21206, 0, 28.62542)
+
+[node name="ejeLógico" parent="SistemaMovimiento" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.7056121, 0.7085986, 0, -0.7085986, 0.7056121, 1.4119225, -0.48879516, 30.224213)
+
+[node name="Cabezal" parent="SistemaMovimiento" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7529902, 2.8674436, 26.371094)
+
+[node name="nodoCentralCeldas" type="Node3D" parent="."]
+
+[node name="CeldaCinta" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="CeldaCinta2" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="CeldaCinta3" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="CeldaCinta4" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+
+[node name="CeldaCinta5" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="CeldaCinta6" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+
+[node name="CeldaCinta7" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21)
+
+[node name="CeldaCinta8" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24)
+
+[node name="CeldaCinta9" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+
+[node name="CeldaCinta10" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="CeldaCinta11" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33)
+
+[node name="CeldaCinta12" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
+
+[node name="CeldaCinta13" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 39)
+
+[node name="CeldaCinta14" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42)
+
+[node name="CeldaCinta15" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
+
+[node name="CeldaCinta16" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="CeldaCinta17" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 51)
+
+[node name="CeldaCinta18" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 54)
+
+[editable path="SistemaMovimiento"]

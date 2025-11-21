@@ -1,0 +1,298 @@
+[gd_scene load_steps=27 format=3 uid="uid://jd5it5af7bfk"]
+
+[ext_resource type="Script" uid="uid://ccp78anvsr1i4" path="res://sistema_movimiento.gd" id="1_6bfgl"]
+[ext_resource type="PackedScene" uid="uid://p3v651x7lm6q" path="res://cabezal.tscn" id="2_jxmtw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wogsq"]
+size = Vector3(1, 1, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wogsq"]
+albedo_color = Color(0.20966567, 0.20966567, 0.20966567, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_6bfgl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxmtw"]
+albedo_color = Color(0, 0, 0.7016299, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_ddhwh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_phgla"]
+albedo_color = Color(0, 0, 0.7019608, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_6rwig"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eopt5"]
+albedo_color = Color(0, 0.5803922, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wogsq"]
+top_radius = 0.2
+bottom_radius = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6rwig"]
+albedo_color = Color(0.2592937, 0.2592937, 0.2592937, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_6bfgl"]
+inner_radius = 0.2
+outer_radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddhwh"]
+albedo_color = Color(0, 0.5167645, 0.5167645, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_phgla"]
+size = Vector3(0.3, 3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ner8"]
+albedo_color = Color(0.29954746, 0.29954743, 0.29954743, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6rwig"]
+top_radius = 0.3
+bottom_radius = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bfgl"]
+albedo_color = Color(0.25273788, 0.1517273, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6bfgl"]
+size = Vector3(0.3, 2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0hqi"]
+albedo_color = Color(0.37063795, 0, 0.11460764, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jxmtw"]
+size = Vector3(0.1, 0.3, 0.2)
+
+[sub_resource type="Curve3D" id="Curve3D_wogsq"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.5, -0.25, -30, 0, 0, 0, 0, 0, 0, 0.5, -0.25, 30, 0, 0, 0, 0, 0, 0, -0.5, -0.25, 30, 0, 0, 0, 0, 0, 0, -0.5, -0.25, -30),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="BoxMesh" id="BoxMesh_tlpae"]
+size = Vector3(1, 1, 0.025)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pyikt"]
+albedo_color = Color(0.2592937, 0.2592937, 0.2592937, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_6bfgl"]
+size = Vector3(3, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr5uc"]
+albedo_color = Color(0.27752772, 0.27752772, 0.27752772, 1)
+
+[node name="SistemaMovimiento" type="Node3D"]
+script = ExtResource("1_6bfgl")
+
+[node name="Riel" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_wogsq")
+surface_material_override/0 = SubResource("StandardMaterial3D_wogsq")
+
+[node name="Piñon1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 1, 0, 29.5)
+mesh = SubResource("TubeTrailMesh_6bfgl")
+surface_material_override/0 = SubResource("StandardMaterial3D_jxmtw")
+
+[node name="Piñon2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 1, 0, -29.5)
+mesh = SubResource("TubeTrailMesh_ddhwh")
+surface_material_override/0 = SubResource("StandardMaterial3D_phgla")
+
+[node name="Idle_gear" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 1.9293897, -1, 29.5)
+mesh = SubResource("TubeTrailMesh_6rwig")
+surface_material_override/0 = SubResource("StandardMaterial3D_eopt5")
+
+[node name="ejeLógico" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.48785964, 0.87292206, 0, -0.87292206, 0.48785964, 1.4119222, -0.48879516, 30.224215)
+
+[node name="varilla" type="MeshInstance3D" parent="ejeLógico"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.7309698, -0.00047582388, 0)
+mesh = SubResource("CylinderMesh_wogsq")
+surface_material_override/0 = SubResource("StandardMaterial3D_6rwig")
+
+[node name="engranajeMovil" type="MeshInstance3D" parent="ejeLógico"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.048886538, -0.00047582388, 0)
+mesh = SubResource("TorusMesh_6bfgl")
+surface_material_override/0 = SubResource("StandardMaterial3D_ddhwh")
+
+[node name="mangoManivela" type="MeshInstance3D" parent="ejeLógico"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8773822, 1.2141132, 0)
+mesh = SubResource("BoxMesh_phgla")
+surface_material_override/0 = SubResource("StandardMaterial3D_4ner8")
+
+[node name="agarreManivela" type="MeshInstance3D" parent="ejeLógico"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0281754, 2.6515079, 0)
+mesh = SubResource("CylinderMesh_6rwig")
+surface_material_override/0 = SubResource("StandardMaterial3D_6bfgl")
+
+[node name="palancaCambio" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.3711395e-08, 1.0000001, 0, -1.0000001, -4.3711395e-08, 1.4546888, -0.7296548, 32.726536)
+
+[node name="horquilla" type="MeshInstance3D" parent="palancaCambio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_6bfgl")
+surface_material_override/0 = SubResource("StandardMaterial3D_b0hqi")
+
+[node name="puntaHorquilla" type="MeshInstance3D" parent="palancaCambio"]
+transform = Transform3D(0.99999994, -3.7252903e-09, 0, 0, 1, 0, -2.3283064e-10, 0, 1, 0.16341448, 2.130127, 4.518032e-05)
+mesh = SubResource("BoxMesh_jxmtw")
+surface_material_override/0 = SubResource("StandardMaterial3D_b0hqi")
+
+[node name="puntaHorquilla2" type="MeshInstance3D" parent="palancaCambio"]
+transform = Transform3D(0.99999994, -3.7252903e-09, 0, 0, 1, 0, -2.3283064e-10, 0, 1, -0.17712307, 2.1325169, -8.4877014e-05)
+mesh = SubResource("BoxMesh_jxmtw")
+surface_material_override/0 = SubResource("StandardMaterial3D_b0hqi")
+
+[node name="cadena" type="Path3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.50659895, 0, -0.113)
+curve = SubResource("Curve3D_wogsq")
+
+[node name="cadenaPolygon" type="CSGPolygon3D" parent="cadena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025735592, 0.5622947, 0.23869467)
+polygon = PackedVector2Array(-0.1, 0.025, 0.1, 0.025, 0.1, -0.025, -0.1, -0.025)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.48
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="tope" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 29.985611)
+mesh = SubResource("BoxMesh_tlpae")
+surface_material_override/0 = SubResource("StandardMaterial3D_pyikt")
+
+[node name="tope2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -29.987343)
+mesh = SubResource("BoxMesh_tlpae")
+surface_material_override/0 = SubResource("StandardMaterial3D_pyikt")
+
+[node name="Cabezal" parent="." instance=ExtResource("2_jxmtw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6946611, 2.8674436, 27.092653)
+
+[node name="dientesCarril" type="Node3D" parent="."]
+
+[node name="diente_carril" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -1.4998659)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril2" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 1.5001341)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril3" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 4.500134)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril4" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 7.500134)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril5" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 10.500134)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril6" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 13.500134)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril7" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 16.500135)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril8" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 19.500135)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril9" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 22.500135)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril10" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 25.500135)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril11" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 28.500135)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril12" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -4.499866)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril13" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -7.499866)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril14" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -10.499866)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril15" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -13.499866)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril16" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -16.499865)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril17" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -19.499865)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril18" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -22.499865)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril19" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -25.499865)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")
+
+[node name="diente_carril20" type="MeshInstance3D" parent="dientesCarril"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, -28.499865)
+mesh = SubResource("PrismMesh_6bfgl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wr5uc")

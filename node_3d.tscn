@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg4jkbmsise7o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4xowi"]
+size = Vector3(5, 2.5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a202f"]
+albedo_color = Color(0.29523656, 0.29523656, 0.29523656, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_noarx"]
+radius = 1.25
+section_length = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+albedo_color = Color(0, 0.34960625, 0.53985995, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
+size = Vector3(0.2, 1.25, 0.2)
+
+[node name="Cabezal" type="Node3D"]
+
+[node name="Cabezal" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_4xowi")
+surface_material_override/0 = SubResource("StandardMaterial3D_a202f")
+
+[node name="engranaje" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2.7448778, -1.2504017, 0)
+mesh = SubResource("TubeTrailMesh_noarx")
+surface_material_override/0 = SubResource("StandardMaterial3D_a0tk4")
+
+[node name="unionCadena" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1511089, 1.3953526)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="unionCadena2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.528789, -1.8760841, 1.3953526)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="unionCadena3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1486684, -1.3971944)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="unionCadena4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52953, -1.8730133, -1.3971944)
+mesh = SubResource("BoxMesh_a202f")

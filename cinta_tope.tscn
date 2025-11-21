@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://y4lt2byjayqo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_joao4"]
+size = Vector3(6, 0.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpo4r"]
+albedo_color = Color(0, 0.43529412, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wpo4r"]
+size = Vector3(0.25, 2, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_joao4"]
+albedo_color = Color(0.5619413, 0.5266813, 3.85046e-07, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yf85b"]
+size = Vector3(0.25, 0.5, 0.25)
+
+[node name="Cinta_tope" type="Node3D"]
+
+[node name="celdaExtrema" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_joao4")
+surface_material_override/0 = SubResource("StandardMaterial3D_wpo4r")
+
+[node name="varilla" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6231922, 1.1293006, 0)
+mesh = SubResource("BoxMesh_wpo4r")
+surface_material_override/0 = SubResource("StandardMaterial3D_joao4")
+
+[node name="varillaToque" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.6230146, 2.0044265, 0.371042)
+mesh = SubResource("BoxMesh_yf85b")
+surface_material_override/0 = SubResource("StandardMaterial3D_joao4")
