@@ -52,7 +52,7 @@ bottom_radius = 0.3
 albedo_color = Color(0.25273788, 0.1517273, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6bfgl"]
-size = Vector3(0.3, 2, 0.2)
+size = Vector3(0.3, 3.5, 0.2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0hqi"]
 albedo_color = Color(0.37063795, 0, 0.11460764, 1)
@@ -111,7 +111,7 @@ mesh = SubResource("CylinderMesh_wogsq")
 surface_material_override/0 = SubResource("StandardMaterial3D_6rwig")
 
 [node name="engranajeMovil" type="MeshInstance3D" parent="ejeLógico"]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.048886538, -0.00047582388, 0)
+transform = Transform3D(-4.371139e-08, -1, 0, 1.0000001, -4.3711392e-08, 0, 0, 0, 1.0000001, 0.24141407, -0.00047683716, 9.536743e-07)
 mesh = SubResource("TorusMesh_6bfgl")
 surface_material_override/0 = SubResource("StandardMaterial3D_ddhwh")
 
@@ -126,10 +126,10 @@ mesh = SubResource("CylinderMesh_6rwig")
 surface_material_override/0 = SubResource("StandardMaterial3D_6bfgl")
 
 [node name="palancaCambio" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.3711395e-08, 1.0000001, 0, -1.0000001, -4.3711395e-08, 1.4546888, -0.7296548, 32.726536)
+transform = Transform3D(1, 0, 0, 0, -0.99949676, -0.031724826, 0, 0.031724826, -0.99949676, 1.6685581, 1.9783509, 30.141775)
 
 [node name="horquilla" type="MeshInstance3D" parent="palancaCambio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2738275, 0.009422302)
 mesh = SubResource("BoxMesh_6bfgl")
 surface_material_override/0 = SubResource("StandardMaterial3D_b0hqi")
 

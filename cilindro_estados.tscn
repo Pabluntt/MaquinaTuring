@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d1cn2a6nofayn"]
+[gd_scene load_steps=33 format=3 uid="uid://d1cn2a6nofayn"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_cude4"]
 top_radius = 0.05
@@ -82,10 +82,26 @@ size = Vector3(0.01, 0.25, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fonw"]
 albedo_color = Color(0, 0, 1, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_xrsaf"]
+size = Vector3(0.05, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qdca"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6qdca"]
+size = Vector3(0.05, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkikd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lkikd"]
+size = Vector3(0.05, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qx5w2"]
+
 [node name="cilindroEstadosSuma" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="cilindroEje" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0)
 mesh = SubResource("CylinderMesh_cude4")
 
 [node name="cilindroGrande" type="MeshInstance3D" parent="cilindroEje"]
@@ -185,3 +201,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3775177, 2.0003326)
 mesh = SubResource("BoxMesh_jvvsc")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_0fonw")
+
+[node name="golpeX" type="MeshInstance3D" parent="cilindroEje/cilindroGrande"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0913702, -0.77490973, 2.2845767)
+mesh = SubResource("BoxMesh_xrsaf")
+surface_material_override/0 = SubResource("StandardMaterial3D_6qdca")
+
+[node name="golpe1" type="MeshInstance3D" parent="cilindroEje/cilindroGrande"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6617012, -0.25747067, 1.937279)
+mesh = SubResource("BoxMesh_6qdca")
+surface_material_override/0 = SubResource("StandardMaterial3D_lkikd")
+
+[node name="golpeX3" type="MeshInstance3D" parent="cilindroEje/cilindroGrande"]
+transform = Transform3D(0.84897715, -0.3557096, -0.3907793, 0.3864374, 0.92231566, -4.1054724e-09, 0.36042187, -0.15101175, 0.92048436, -0.8591685, -1.7249242, 2.452075)
+mesh = SubResource("BoxMesh_lkikd")
+surface_material_override/0 = SubResource("StandardMaterial3D_qx5w2")
+
+[node name="golpeX2" type="MeshInstance3D" parent="cilindroEje/cilindroGrande"]
+transform = Transform3D(0.8127112, -0.28463927, -0.50841033, 0.33054736, 0.9437894, -3.6138168e-09, 0.4798323, -0.1680537, 0.8611149, -0.6640103, 0.49743375, 2.5048192)
+mesh = SubResource("BoxMesh_lkikd")
+surface_material_override/0 = SubResource("StandardMaterial3D_qx5w2")

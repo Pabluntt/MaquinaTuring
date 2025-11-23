@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://p3v651x7lm6q"]
+[gd_scene load_steps=39 format=3 uid="uid://p3v651x7lm6q"]
 
 [ext_resource type="PackedScene" uid="uid://d1cn2a6nofayn" path="res://cilindro_estados.tscn" id="1_d4hm8"]
 
@@ -6,17 +6,8 @@
 size = Vector3(5, 2.5, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a202f"]
-albedo_color = Color(0.29523656, 0.29523656, 0.29523656, 1)
-
-[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_noarx"]
-radius = 1.25
-section_length = 0.1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
-albedo_color = Color(0, 0.34960625, 0.53985995, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
-size = Vector3(0.2, 1.25, 0.2)
+transparency = 1
+albedo_color = Color(0.29411766, 0.29411766, 0.29411766, 0.8666667)
 
 [sub_resource type="TubeTrailMesh" id="TubeTrailMesh_2ohfs"]
 radius = 0.25
@@ -24,6 +15,40 @@ section_length = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ohfs"]
 albedo_color = Color(0, 0.48557895, 3.85046e-07, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_xhvlk"]
+radius = 0.1
+section_length = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_tkpki"]
+size = Vector3(0.1, 3.15, 0.1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_dnd33"]
+radius = 0.1
+section_length = 0.12
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_5dl7j"]
+radius = 0.1
+section_length = 0.5
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_iwp7v"]
+radius = 0.1
+section_length = 0.25
+
+[sub_resource type="BoxMesh" id="BoxMesh_dnd33"]
+size = Vector3(0.1, 2.8, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8g3il"]
+size = Vector3(0.1, 2.5, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nfwnr"]
+size = Vector3(0.1, 3.6, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ymtms"]
+size = Vector3(0.1, 2.5, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3atyq"]
+size = Vector3(0.1, 3.5, 0.1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_2ohfs"]
 top_radius = 0.3
@@ -41,6 +66,67 @@ height = 0.025
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dl7j"]
 albedo_color = Color(0.50074106, 1.2153015e-06, 1.4439226e-07, 1)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_trhmv"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 1.0
+radial_segments = 100
+rings = 9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tkpki"]
+top_radius = 0.025
+bottom_radius = 0.05
+height = 0.05
+
+[sub_resource type="BoxMesh" id="BoxMesh_d4hm8"]
+size = Vector3(3.4, 0.09, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xhvlk"]
+size = Vector3(0.7, 0.09, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bvppy"]
+size = Vector3(1.5, 0.09, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_trhmv"]
+size = Vector3(3.4, 0.09, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5dl7j"]
+size = Vector3(3.8, 0.09, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iwp7v"]
+size = Vector3(0.5, 0.09, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_11h8k"]
+size = Vector3(1, 0.09, 0.09)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_noarx"]
+radius = 1.25
+section_length = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+albedo_color = Color(0, 0.34960625, 0.53985995, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
+size = Vector3(0.2, 1.25, 0.2)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5dl7j"]
+top_radius = 0.15
+bottom_radius = 0.15
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_iwp7v"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 5.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bvppy"]
+top_radius = 0.15
+bottom_radius = 0.15
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_d4hm8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwp7v"]
+albedo_color = Color(0, 0.41960785, 1, 1)
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_d4hm8"]
 top_radius = 0.15
 bottom_radius = 0.15
@@ -55,70 +141,298 @@ albedo_color = Color(0.44752336, 0.4475239, 0, 1)
 mesh = SubResource("BoxMesh_4xowi")
 surface_material_override/0 = SubResource("StandardMaterial3D_a202f")
 
-[node name="engranaje" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2.7448778, -1.2504017, 0)
-mesh = SubResource("TubeTrailMesh_noarx")
-surface_material_override/0 = SubResource("StandardMaterial3D_a0tk4")
+[node name="receptor0" type="Node3D" parent="Cabezal"]
 
-[node name="unionCadena" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1511089, 1.3953526)
-mesh = SubResource("BoxMesh_a202f")
-
-[node name="unionCadena2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.528789, -1.8760841, 1.3953526)
-mesh = SubResource("BoxMesh_a202f")
-
-[node name="unionCadena3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1486684, -1.3971944)
-mesh = SubResource("BoxMesh_a202f")
-
-[node name="unionCadena4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52953, -1.8730133, -1.3971944)
-mesh = SubResource("BoxMesh_a202f")
-
-[node name="engranajeReceptor0" type="MeshInstance3D" parent="."]
+[node name="engranajeReceptor0" type="MeshInstance3D" parent="Cabezal/receptor0"]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.99944, -1.2775215, 0)
 mesh = SubResource("TubeTrailMesh_2ohfs")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ohfs")
 
-[node name="engranajeReceptor1" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cabezal/receptor0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8162227, 0.16543555, 0.00011077523)
+mesh = SubResource("TubeTrailMesh_xhvlk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cabezal/receptor0"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.041048422, 1.7835749, 0)
+mesh = SubResource("BoxMesh_tkpki")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cabezal/receptor0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6281371, 1.5375804, 0)
+mesh = SubResource("TubeTrailMesh_dnd33")
+
+[node name="receptor1" type="Node3D" parent="Cabezal"]
+
+[node name="engranajeReceptor1" type="MeshInstance3D" parent="Cabezal/receptor1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5019433, -1.0422322, 0)
 mesh = SubResource("TubeTrailMesh_2ohfs")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ohfs")
 
-[node name="mecanismoLectura0" type="Node3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cabezal/receptor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2135735, 0.26444274, 0.00049613416)
+mesh = SubResource("TubeTrailMesh_5dl7j")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cabezal/receptor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3962798, 1.8638023, 0)
+mesh = SubResource("TubeTrailMesh_iwp7v")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cabezal/receptor1/MeshInstance3D2"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.468438, 0.5326067, 0)
+mesh = SubResource("BoxMesh_dnd33")
+
+[node name="receptor[]1" type="Node3D" parent="Cabezal"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cabezal/receptor[]1"]
+transform = Transform3D(1, 0, 0, 0, 0.98452765, 0.17522925, 0, -0.17522925, 0.98452765, -1.8985561, 0.21598417, 1.1611243)
+mesh = SubResource("BoxMesh_8g3il")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cabezal/receptor[]1"]
+transform = Transform3D(-0.14984083, -0.98316777, 0.104541875, 0.98870814, -0.14878367, 0.017883193, -0.0020280567, 0.10604104, 0.9943596, -0.14658242, 1.5780685, 0.86524737)
+mesh = SubResource("BoxMesh_nfwnr")
+
+[node name="receptor[]2" type="Node3D" parent="Cabezal"]
+transform = Transform3D(1, -8.742278e-08, 0, 8.742278e-08, 1, 0, 0, 0, -1, 0, 0, 0.0067367554)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cabezal/receptor[]2"]
+transform = Transform3D(1, 0, 0, 0, 0.98452765, 0.17522925, 0, -0.17522925, 0.98452765, -1.8985561, 0.21598417, 1.1611243)
+mesh = SubResource("BoxMesh_ymtms")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cabezal/receptor[]2"]
+transform = Transform3D(-0.14107265, -0.964368, -0.22381417, 0.9887081, -0.14878364, 0.017883219, -0.05054591, -0.21876408, 0.97446764, -0.24504036, 1.5780685, 1.1899511)
+mesh = SubResource("BoxMesh_3atyq")
+
+[node name="mecanismoEscritura0" type="Node3D" parent="Cabezal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.305557, -1.2629194, 0)
 
-[node name="imanCaraRepele0" type="MeshInstance3D" parent="mecanismoLectura0"]
+[node name="imanCaraAtrae1" type="MeshInstance3D" parent="Cabezal/mecanismoEscritura0"]
 mesh = SubResource("CylinderMesh_2ohfs")
 surface_material_override/0 = SubResource("StandardMaterial3D_d4hm8")
 
-[node name="imanCaraAtrae0" type="MeshInstance3D" parent="mecanismoLectura0"]
+[node name="imanCaraRepele0" type="MeshInstance3D" parent="Cabezal/mecanismoEscritura0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025549889, 0)
 mesh = SubResource("CylinderMesh_xhvlk")
 surface_material_override/0 = SubResource("StandardMaterial3D_5dl7j")
 
-[node name="mecanismoLectura1" type="Node3D" parent="."]
+[node name="mecanismoEscritura1" type="Node3D" parent="Cabezal"]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -2.4850872, -0.5753169, 0)
 
-[node name="imanCaraRepele1" type="MeshInstance3D" parent="mecanismoLectura1"]
+[node name="imanCaraAtrae1" type="MeshInstance3D" parent="Cabezal/mecanismoEscritura1"]
 mesh = SubResource("CylinderMesh_2ohfs")
 surface_material_override/0 = SubResource("StandardMaterial3D_d4hm8")
 
-[node name="imanCaraAtrae1" type="MeshInstance3D" parent="mecanismoLectura1"]
+[node name="imanCaraRepele1" type="MeshInstance3D" parent="Cabezal/mecanismoEscritura1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025549889, 0)
 mesh = SubResource("CylinderMesh_xhvlk")
 surface_material_override/0 = SubResource("StandardMaterial3D_5dl7j")
 
-[node name="lectorExtremoDer" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.898939, -0.94208205, -1.5421152)
-mesh = SubResource("CylinderMesh_d4hm8")
-surface_material_override/0 = SubResource("StandardMaterial3D_xhvlk")
+[node name="varillas" type="Node3D" parent="Cabezal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2440457, 0.014203191, 0)
 
-[node name="lectorExtremoIzq" type="MeshInstance3D" parent="."]
+[node name="SistemaX" type="Node3D" parent="Cabezal/varillas"]
+
+[node name="varillaX" type="MeshInstance3D" parent="Cabezal/varillas/SistemaX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, -0.49027884)
+skeleton = NodePath("../..")
+
+[node name="largovarilla" type="MeshInstance3D" parent="Cabezal/varillas/SistemaX/varillaX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../../..")
+
+[node name="puntavarilla" type="MeshInstance3D" parent="Cabezal/varillas/SistemaX/varillaX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../../..")
+
+[node name="SeñalX" type="MeshInstance3D" parent="Cabezal/varillas/SistemaX"]
+transform = Transform3D(0.8538916, -0.51038265, 0.10187553, 0.51066536, 0.8594082, 0.025268253, -0.10044913, 0.030447932, 0.9944763, -1.4577099, -0.27706358, -0.32027143)
+mesh = SubResource("BoxMesh_d4hm8")
+skeleton = NodePath("../..")
+
+[node name="varilla señalX" type="MeshInstance3D" parent="Cabezal/varillas/SistemaX"]
+transform = Transform3D(0.94484085, -0.3080898, 0.11115924, 0.30780017, 0.9512367, 0.020189034, -0.1119588, 0.015139414, 0.9935975, -3.138813, -1.0401498, -0.09658936)
+mesh = SubResource("BoxMesh_xhvlk")
+
+[node name="SistemaSigQ" type="Node3D" parent="Cabezal/varillas"]
+
+[node name="varillaSigQ" type="MeshInstance3D" parent="Cabezal/varillas/SistemaSigQ"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, -1.2667937)
+skeleton = NodePath("../..")
+
+[node name="largovarilla" type="MeshInstance3D" parent="Cabezal/varillas/SistemaSigQ/varillaSigQ"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../../..")
+
+[node name="puntavarilla" type="MeshInstance3D" parent="Cabezal/varillas/SistemaSigQ/varillaSigQ"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../../..")
+
+[node name="varillaSeñalSigQ" type="MeshInstance3D" parent="Cabezal/varillas/SistemaSigQ"]
+transform = Transform3D(-4.371138e-08, 0, -0.9999999, 0.13133942, 0.9913375, -5.7410285e-09, 0.99133736, -0.13133942, -4.3332733e-08, 0, 0.4960432, -1.9894439)
+mesh = SubResource("BoxMesh_bvppy")
+
+[node name="varillaSigQgolpea" type="MeshInstance3D" parent="Cabezal/varillas/SistemaSigQ"]
+transform = Transform3D(-0.11739878, -0.99308485, 0, 0.99308485, -0.11739878, 0, 0, 0, 1, -0.2005961, 2.1231527, -2.696342)
+mesh = SubResource("BoxMesh_trhmv")
+
+[node name="varillaHalt" type="MeshInstance3D" parent="Cabezal/varillas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, -2.1400752)
+
+[node name="varillaH" type="MeshInstance3D" parent="Cabezal/varillas/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, 0.031286478, 1.1645193, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="varillaH2" type="MeshInstance3D" parent="Cabezal/varillas/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, 0.15028787, 0.17399788, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="varillaH3" type="MeshInstance3D" parent="Cabezal/varillas/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, 0.25733066, -0.7206635, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="puntaVarilla" type="MeshInstance3D" parent="Cabezal/varillas/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, -0.031286478, 1.6853299, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../..")
+
+[node name="Sistema1" type="Node3D" parent="Cabezal/varillas"]
+
+[node name="varilla1" type="MeshInstance3D" parent="Cabezal/varillas/Sistema1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, 0.36596483)
+skeleton = NodePath("../..")
+
+[node name="largoVarilla1" type="MeshInstance3D" parent="Cabezal/varillas/Sistema1/varilla1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../../..")
+
+[node name="puntaVarilla1" type="MeshInstance3D" parent="Cabezal/varillas/Sistema1/varilla1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../../..")
+
+[node name="Señal1" type="MeshInstance3D" parent="Cabezal/varillas/Sistema1"]
+transform = Transform3D(0.9570011, -0.29008424, 0, 0.29008424, 0.9570011, 0, 0, 0, 1, -1.8130018, 0.03882289, 0.36280078)
+mesh = SubResource("BoxMesh_5dl7j")
+skeleton = NodePath("../..")
+
+[node name="varillaCortaSeñal1" type="MeshInstance3D" parent="Cabezal/varillas/Sistema1"]
+transform = Transform3D(0.9909808, -0.13400346, 0, 0.13400346, 0.9909808, 0, 0, 0, 1, -3.9501677, -0.42374387, 0.36910963)
+mesh = SubResource("BoxMesh_xhvlk")
+
+[node name="varillaSeñal1" type="MeshInstance3D" parent="Cabezal/varillas/Sistema1"]
+transform = Transform3D(0.8181999, 0, -0.5749339, 0, 1, 0, 0.5749339, 0, 0.8181999, -4.4452467, -0.6215496, 0.2550336)
+mesh = SubResource("BoxMesh_iwp7v")
+
+[node name="varillaL" type="MeshInstance3D" parent="Cabezal/varillas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, 1.2161129)
+
+[node name="largoVarilla" type="MeshInstance3D" parent="Cabezal/varillas/varillaL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="puntavarilla" type="MeshInstance3D" parent="Cabezal/varillas/varillaL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../..")
+
+[node name="señalLtirarCuerda" type="MeshInstance3D" parent="Cabezal/varillas/varillaL"]
+transform = Transform3D(0.72188103, -0.6920172, 0, 0.6920172, 0.72188103, 0, 0, 0, 1, -0.31891227, 0.28240263, -0.019444466)
+mesh = SubResource("BoxMesh_11h8k")
+skeleton = NodePath("../..")
+
+[node name="engranaje" type="MeshInstance3D" parent="Cabezal"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2.7448778, -1.2504017, 0)
+mesh = SubResource("TubeTrailMesh_noarx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_a0tk4")
+
+[node name="unionCadena" type="MeshInstance3D" parent="Cabezal"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1511089, 1.3953526)
+mesh = SubResource("BoxMesh_a202f")
+skeleton = NodePath("../..")
+
+[node name="unionCadena2" type="MeshInstance3D" parent="Cabezal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.528789, -1.8760841, 1.3953526)
+mesh = SubResource("BoxMesh_a202f")
+skeleton = NodePath("../..")
+
+[node name="unionCadena3" type="MeshInstance3D" parent="Cabezal"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.0040824, -1.1486684, -1.3971944)
+mesh = SubResource("BoxMesh_a202f")
+skeleton = NodePath("../..")
+
+[node name="unionCadena4" type="MeshInstance3D" parent="Cabezal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52953, -1.8730133, -1.3971944)
+mesh = SubResource("BoxMesh_a202f")
+skeleton = NodePath("../..")
+
+[node name="cilindroEstadosSuma" parent="Cabezal" instance=ExtResource("1_d4hm8")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 2.262, 4.324, -0.0016368628)
+
+[node name="cilindroEje" parent="Cabezal/cilindroEstadosSuma" index="0"]
+transform = Transform3D(1, 0, 0, 0, -0.9999998, -8.742276e-08, 0, 8.742276e-08, -0.9999998, 0, 0, 0)
+
+[node name="cilindroGrande" parent="Cabezal/cilindroEstadosSuma/cilindroEje" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="soportes" type="Node3D" parent="Cabezal"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.262, 4.324, -2.5)
+
+[node name="soporte" type="MeshInstance3D" parent="Cabezal/soportes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+mesh = SubResource("CylinderMesh_5dl7j")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="soporte2" type="MeshInstance3D" parent="Cabezal/soportes"]
+mesh = SubResource("CylinderMesh_5dl7j")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="soporteV1" type="MeshInstance3D" parent="Cabezal/soportes"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 5.903141, 2.3919296)
+mesh = SubResource("CylinderMesh_iwp7v")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="union1" type="MeshInstance3D" parent="Cabezal/soportes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.9106264, 4.768488)
+mesh = SubResource("CylinderMesh_bvppy")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="soporteV2" type="MeshInstance3D" parent="Cabezal/soportes"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.84608054, 2.404285)
+mesh = SubResource("CylinderMesh_iwp7v")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="union2" type="MeshInstance3D" parent="Cabezal/soportes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1623764, 4.7742934)
+mesh = SubResource("CylinderMesh_bvppy")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="engranajeCambioEstado" type="MeshInstance3D" parent="Cabezal/soportes"]
+mesh = SubResource("TubeTrailMesh_d4hm8")
+surface_material_override/0 = SubResource("StandardMaterial3D_iwp7v")
+
+[node name="Node3D" type="Node3D" parent="Cabezal"]
+
+[node name="lectorExtremoIzq" type="MeshInstance3D" parent="Cabezal/Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.898939, -0.94208205, 1.5487082)
 mesh = SubResource("CylinderMesh_d4hm8")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_xhvlk")
 
-[node name="cilindroEstadosSuma" parent="." instance=ExtResource("1_d4hm8")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.2618575, 4.323815, -2.4310164)
+[node name="Node3D2" type="Node3D" parent="Cabezal"]
+
+[node name="lectorExtremoDer" type="MeshInstance3D" parent="Cabezal/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.898939, -0.94208205, -1.5421152)
+mesh = SubResource("CylinderMesh_d4hm8")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_xhvlk")
+
+[editable path="Cabezal/cilindroEstadosSuma"]

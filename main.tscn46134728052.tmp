@@ -16,24 +16,22 @@ point_count = 4
 [sub_resource type="BoxMesh" id="BoxMesh_lquwl"]
 size = Vector3(0.1, 3, 0.1)
 
-[node name="MaquinaTuring" type="Node3D" node_paths=PackedStringArray("eje_manivela", "cabezal", "cilindro_principal", "raycast_verde_frente", "raycast_verde_abajo", "raycast_amarillo_izq", "contenedor_fichas", "raycast_amarillo_der", "visual_verde_1", "visual_verde_0", "visual_amarillo_izq", "visual_amarillo_der")]
+[node name="MaquinaTuring" type="Node3D" node_paths=PackedStringArray("eje_manivela", "cabezal", "cilindro_principal", "raycast_verde_frente", "raycast_verde_abajo", "raycast_amarillo_izq", "raycast_amarillo_der", "visual_verde_1", "visual_verde_0", "visual_amarillo_izq", "visual_amarillo_der")]
 script = ExtResource("1_1bvp3")
-modo_actual = 1
 eje_manivela = NodePath("SistemaMovimiento/ejeLógico")
 cabezal = NodePath("SistemaMovimiento/Cabezal")
 cilindro_principal = NodePath("SistemaMovimiento/Cabezal/Cabezal/cilindroEstadosSuma")
 raycast_verde_frente = NodePath("SistemaMovimiento/Cabezal/Cabezal/receptor1/engranajeReceptor1/ray1")
 raycast_verde_abajo = NodePath("SistemaMovimiento/Cabezal/Cabezal/receptor0/engranajeReceptor0/ray0")
-raycast_amarillo_izq = NodePath("SistemaMovimiento/Cabezal/Cabezal/Node3D/lectorExtremoIzq/rayIzq")
-contenedor_fichas = NodePath("nodoCentralCeldas")
-raycast_amarillo_der = NodePath("SistemaMovimiento/Cabezal/Cabezal/RayCast3D")
+raycast_amarillo_izq = NodePath("SistemaMovimiento/Cabezal/Cabezal/Node3D/lectorExtremoIzq/SistemaMovimiento_Cabezal_Cabezal_lectorExtremoIzq#SistemaMovimiento_Cabezal_Cabezal_receptor[]1_lectorExtremoIzq#rayIzq")
+raycast_amarillo_der = NodePath("SistemaMovimiento/Cabezal/Cabezal/Node3D2/lectorExtremoDer/SistemaMovimiento_Cabezal_Cabezal_lectorExtremoDer#SistemaMovimiento_Cabezal_Cabezal_receptor[]2_lectorExtremoDer#rayDer")
 visual_verde_1 = NodePath("SistemaMovimiento/Cabezal/Cabezal/receptor1/engranajeReceptor1")
 visual_verde_0 = NodePath("SistemaMovimiento/Cabezal/Cabezal/receptor0/engranajeReceptor0")
 visual_amarillo_izq = NodePath("SistemaMovimiento/Cabezal/Cabezal/Node3D/lectorExtremoIzq")
 visual_amarillo_der = NodePath("SistemaMovimiento/Cabezal/Cabezal/Node3D2/lectorExtremoDer")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.018028162, 0, -0.9998375, 0, 1, 0, 0.9998375, 0, -0.018028162, -24.966204, 10.991262, 25.370827)
+transform = Transform3D(0.7678589, 0, -0.64061904, 0, 1, 0, 0.64061904, 0, 0.7678589, -4.084338, 2.4638388, 59.528866)
 fov = 89.95423
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
@@ -42,17 +40,13 @@ fov = 89.95423
 transform = Transform3D(-0.24157315, 0.20369425, -0.9487629, -0.17977403, 0.9514011, 0.25003457, 0.9535847, 0.23096454, -0.19321403, -9.907742, 2.5480986, -24.710379)
 
 [node name="Cinta_tope" parent="." instance=ExtResource("3_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3859396)
-
-[node name="CollisionShape3D" parent="Cinta_tope/varillaToque/StaticBody3D" index="0"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.00020778179, 0.4185208, -0.006652355)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0125012)
 
 [node name="Cinta_tope2" parent="." instance=ExtResource("3_1bvp3")]
 transform = Transform3D(1, -8.742278e-08, 0, 8.742278e-08, 1, 0, 0, 0, -1, 0, 0, 59.196724)
 
 [node name="SistemaMovimiento" parent="." instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21206, 0, 28.62542)
-script = null
 
 [node name="ejeLógico" parent="SistemaMovimiento" index="4"]
 transform = Transform3D(1, 0, 0, 0, 0.7056121, 0.7085986, 0, -0.7085986, 0.7056121, 1.4119225, -0.48879516, 30.224213)
@@ -78,28 +72,24 @@ transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -
 target_position = Vector3(0, -0.5, 0)
 
 [node name="Node3D" parent="SistemaMovimiento/Cabezal/Cabezal" index="14"]
-transform = Transform3D(1, 0, 0, 0, -0.0055152336, -0.9999848, 0, 0.9999848, -0.0055152336, -1.8396244, -0.9047656, 1.4123573)
+transform = Transform3D(1, 0, 0, 0, -0.0055152336, -0.9999848, 0, 0.9999848, -0.0055152336, -1.8396244, -0.9047656, 1.424099)
 
 [node name="lectorExtremoIzq" parent="SistemaMovimiento/Cabezal/Cabezal/Node3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.99998665, 0.0051835547, 0, -0.0051835547, 0.99998665, -0.0014146566, 0.06473541, -0.013227224)
+transform = Transform3D(1, 0, 0, 0, 0.99998665, 0.0051835547, 0, -0.0051835547, 0.99998665, -0.0014146566, 0.08540344, -0.013341188)
 
-[node name="rayIzq" type="RayCast3D" parent="SistemaMovimiento/Cabezal/Cabezal/Node3D/lectorExtremoIzq" index="0"]
-transform = Transform3D(1, 0, 0, 0, -0.99999887, 0.0015881407, 0, -0.0015881407, -0.99999887, 0, 0.040626526, 1.5497208e-06)
-target_position = Vector3(0, -0.5, 0)
-collision_mask = 5
-hit_from_inside = true
+[node name="SistemaMovimiento_Cabezal_Cabezal_lectorExtremoIzq#SistemaMovimiento_Cabezal_Cabezal_receptor[]1_lectorExtremoIzq#rayIzq" type="RayCast3D" parent="SistemaMovimiento/Cabezal/Cabezal/Node3D/lectorExtremoIzq" index="0"]
+transform = Transform3D(1, 0, 0, 0, -0.99999887, 0.0015881407, 0, -0.0015881407, -0.99999887, 0, 0.045719147, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="Node3D2" parent="SistemaMovimiento/Cabezal/Cabezal" index="15"]
-transform = Transform3D(1, 0, 0, 0, -0.0066845356, 0.99997765, 0, -0.99997765, -0.0066845356, -1.9831836, -0.9914348, -1.5467567)
+transform = Transform3D(1, 0, 0, 0, -0.0066845356, 0.99997765, 0, -0.99997765, -0.0066845356, -1.9831836, -0.9914348, -1.572216)
 
 [node name="lectorExtremoDer" parent="SistemaMovimiento/Cabezal/Cabezal/Node3D2" index="0"]
-transform = Transform3D(1, 0, 0, 0, -0.9999762, 0.0068591847, 0, -0.0068591847, -0.9999762, 0.15651023, -0.062999725, 0.09687555)
+transform = Transform3D(1, 0, 0, 0, -0.99997634, 0.0068591842, 0, -0.0068591842, -0.99997634, 0.15651023, -0.031002045, 0.021681547)
 
-[node name="RayCast3D" type="RayCast3D" parent="SistemaMovimiento/Cabezal/Cabezal" index="16"]
-transform = Transform3D(1, 0, 0, 0, 0.0005584518, -0.9999998, 0, 0.9999998, 0.0005584518, -1.8326228, -0.8905747, -1.5377617)
-target_position = Vector3(0, -0.5, 0)
-collision_mask = 5
-hit_from_inside = true
+[node name="SistemaMovimiento_Cabezal_Cabezal_lectorExtremoDer#SistemaMovimiento_Cabezal_Cabezal_receptor[]2_lectorExtremoDer#rayDer" type="RayCast3D" parent="SistemaMovimiento/Cabezal/Cabezal/Node3D2/lectorExtremoDer" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.043323517, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="nodoCentralCeldas" type="Node3D" parent="."]
 
@@ -125,34 +115,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21)
 
 [node name="CeldaCinta8" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24)
 
 [node name="CeldaCinta9" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
 
 [node name="CeldaCinta10" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
 
 [node name="CeldaCinta11" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 33)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33)
 
 [node name="CeldaCinta12" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 36)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
 
 [node name="CeldaCinta13" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 39)
 
 [node name="CeldaCinta14" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 42)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42)
 
 [node name="CeldaCinta15" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 45)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
 
 [node name="CeldaCinta16" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
 transform = Transform3D(-4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0, 1, 0, 0, 48)
 
 [node name="CeldaCinta17" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 51)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 51)
 
 [node name="CeldaCinta18" parent="nodoCentralCeldas" instance=ExtResource("2_h2yge")]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 54)
