@@ -7,6 +7,10 @@ extends Node3D
 enum ModoOperacion { SUMA, RESTA }
 @export var modo_actual: ModoOperacion = ModoOperacion.SUMA 
 
+@export_category("--- Modelos de Cilindros ---")
+@export var modelo_cilindro_suma: Node3D
+@export var modelo_cilindro_resta: Node3D
+
 @export_category("--- Referencias Físicas ---")
 @export var eje_manivela: Node3D
 @export var cabezal: Node3D
@@ -50,10 +54,26 @@ var tabla_resta = {
 }
 
 func _ready():
+	# Alineación inicial
 	rotacion_acumulada = 0.0
 	eje_manivela.rotation_degrees.x = 0.0
-	if modo_actual == ModoOperacion.SUMA: tabla_activa = tabla_suma
-	else: tabla_activa = tabla_resta
+	
+	# --- INTERRUPTOR DE LÓGICA Y VISUAL ---
+	if modo_actual == ModoOperacion.SUMA:
+		print(">> MODO: SUMA (Cargando tabla y modelo...)")
+		tabla_activa = tabla_suma
+		
+		# Encendemos Suma, Apagamos Resta
+		if modelo_cilindro_suma: modelo_cilindro_suma.visible = true
+		if modelo_cilindro_resta: modelo_cilindro_resta.visible = false
+		
+	else:
+		print(">> MODO: RESTA (Cargando tabla y modelo...)")
+		tabla_activa = tabla_resta
+		
+		# Encendemos Resta, Apagamos Suma
+		if modelo_cilindro_suma: modelo_cilindro_suma.visible = false
+		if modelo_cilindro_resta: modelo_cilindro_resta.visible = true
 
 func _process(delta):
 	if Input.is_action_pressed("ui_right"):

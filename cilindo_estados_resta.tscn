@@ -88,105 +88,105 @@ albedo_color = Color(0, 0, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
 mesh = SubResource("CylinderMesh_85ghs")
 
-[node name="cilindroGrande" type="MeshInstance3D" parent="cilindroEje"]
+[node name="cilindroResta" type="MeshInstance3D" parent="cilindroEje"]
 mesh = SubResource("CylinderMesh_ftcxk")
 skeleton = NodePath("../..")
 
-[node name="anilloR" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anilloR" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 0, 3.0615973, 0)
 
-[node name="q0X" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloR"]
+[node name="q0X" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloR"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, -0.010378718, 0, 2.4948094)
 mesh = SubResource("BoxMesh_o84yp")
 surface_material_override/0 = SubResource("StandardMaterial3D_l6lgx")
 
-[node name="q01" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloR"]
+[node name="q01" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloR"]
 transform = Transform3D(0.7657196, 0, -0.6431755, 0, 1, 0, 0.6431755, 0, 0.7657196, -1.600856, 0, 1.9078264)
 mesh = SubResource("BoxMesh_ryp4g")
 surface_material_override/0 = SubResource("StandardMaterial3D_pas1s")
 
-[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloR"]
+[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloR"]
 transform = Transform3D(0.93940574, 0, 0.34280723, 0, 1, 0, -0.34280723, 0, 0.93940574, -0.8572556, 0, -2.3552897)
 mesh = SubResource("BoxMesh_eu356")
 surface_material_override/0 = SubResource("StandardMaterial3D_3jp7x")
 
-[node name="q1X" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloR"]
+[node name="q1X" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloR"]
 transform = Transform3D(0.86404645, 0, 0.5034121, 0, 1, 0, -0.5034121, 0, 0.86404645, 2.168548, 0, -1.2520115)
 mesh = SubResource("BoxMesh_bq1vm")
 surface_material_override/0 = SubResource("StandardMaterial3D_i1lgr")
 
-[node name="anilloL" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anilloL" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(0.17364815, 0, -0.9848077, 0, 1, 0, 0.9848077, 0, 0.17364815, 0, 2.1865973, 0)
 
-[node name="q2X" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloL"]
+[node name="q2X" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4977155)
 mesh = SubResource("BoxMesh_1cx27")
 surface_material_override/0 = SubResource("StandardMaterial3D_v5ai4")
 
-[node name="q11" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloL"]
+[node name="q11" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloL"]
 transform = Transform3D(0.9347143, 0, 0.3554007, 0, 1, 0, -0.3554007, 0, 0.9347143, -0.8566554, 0, -2.3536408)
 mesh = SubResource("BoxMesh_8wmc4")
 surface_material_override/0 = SubResource("StandardMaterial3D_wg8ds")
 
-[node name="anillo1" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anillo1" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3115973, 0)
 
-[node name="anilloX" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anilloX" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(-0.5000001, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.5000001, 0, 0.43659735, 0)
 
-[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloX"]
+[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloX"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4977155)
 mesh = SubResource("BoxMesh_1cx27")
 surface_material_override/0 = SubResource("StandardMaterial3D_v5ai4")
 
-[node name="q11" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloX"]
+[node name="q11" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloX"]
 transform = Transform3D(0.8598881, 0, -0.51048297, 0, 1, 0, 0.51048297, 0, 0.8598881, -2.1638832, 0, -1.2493186)
 mesh = SubResource("BoxMesh_85ghs")
 surface_material_override/0 = SubResource("StandardMaterial3D_ftcxk")
 
-[node name="anilloq0" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anilloq0" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 0, -0.43840265, 0)
 
-[node name="q0X" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloq0"]
+[node name="q0X" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloq0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5026183)
 mesh = SubResource("BoxMesh_l6lgx")
 surface_material_override/0 = SubResource("StandardMaterial3D_ryp4g")
 
-[node name="anilloq1" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anilloq1" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(0.17364822, 0, -0.9848077, 0, 1, 0, 0.9848077, 0, 0.17364822, 0, -1.3134027, 0)
 
-[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloq1"]
+[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloq1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5026183)
 mesh = SubResource("BoxMesh_l6lgx")
 surface_material_override/0 = SubResource("StandardMaterial3D_ryp4g")
 
-[node name="anilloq2" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anilloq2" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 0, -2.1884027, 0)
 
-[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloq2"]
+[node name="q21" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloq2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5026183)
 mesh = SubResource("BoxMesh_l6lgx")
 surface_material_override/0 = SubResource("StandardMaterial3D_ryp4g")
 
-[node name="anilloqHalt" type="Node3D" parent="cilindroEje/cilindroGrande"]
+[node name="anilloqHalt" type="Node3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(0.7660443, 0, -0.64278775, 0, 1, 0, 0.64278775, 0, 0.7660443, 0, -3.0634027, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloqHalt"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloqHalt"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4934032)
 mesh = SubResource("BoxMesh_pas1s")
 surface_material_override/0 = SubResource("StandardMaterial3D_eu356")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloqHalt"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloqHalt"]
 transform = Transform3D(0.8600573, 0, -0.5101978, 0, 1, 0, 0.5101978, 0, 0.8600573, -2.1625564, 0, -1.2485527)
 mesh = SubResource("BoxMesh_3jp7x")
 surface_material_override/0 = SubResource("StandardMaterial3D_bq1vm")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="cilindroEje/cilindroGrande/anilloqHalt"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="cilindroEje/cilindroResta/anilloqHalt"]
 transform = Transform3D(0.5189673, 0, -0.854794, 0, 1, 0, 0.854794, 0, 0.5189673, 2.1608992, 0, -1.2475954)
 mesh = SubResource("BoxMesh_i1lgr")
 surface_material_override/0 = SubResource("StandardMaterial3D_1cx27")
 
-[node name="marcadorInicio" type="MeshInstance3D" parent="cilindroEje/cilindroGrande"]
+[node name="marcadorInicio" type="MeshInstance3D" parent="cilindroEje/cilindroResta"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3763714, 2.0003326)
 mesh = SubResource("BoxMesh_gij7q")
 skeleton = NodePath("../../..")

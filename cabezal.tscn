@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://p3v651x7lm6q"]
+[gd_scene load_steps=43 format=3 uid="uid://p3v651x7lm6q"]
 
 [ext_resource type="PackedScene" uid="uid://d1cn2a6nofayn" path="res://cilindro_estados.tscn" id="1_d4hm8"]
 
@@ -85,10 +85,10 @@ size = Vector3(3.4, 0.09, 0.09)
 size = Vector3(0.7, 0.09, 0.09)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bvppy"]
-size = Vector3(1.5, 0.09, 0.09)
+size = Vector3(2.4, 0.09, 0.09)
 
 [sub_resource type="BoxMesh" id="BoxMesh_trhmv"]
-size = Vector3(3.4, 0.09, 0.09)
+size = Vector3(3.5, 0.09, 0.09)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5dl7j"]
 size = Vector3(3.8, 0.09, 0.09)
@@ -134,6 +134,26 @@ height = 0.1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhvlk"]
 albedo_color = Color(0.44752336, 0.4475239, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dnd33"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 3.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_11h8k"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 4.739
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8g3il"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 4.739
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nfwnr"]
+top_radius = 0.23
+bottom_radius = 0.23
+height = 3.0
 
 [node name="Cabezal" type="Node3D"]
 
@@ -228,6 +248,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5dl7j")
 
 [node name="varillas" type="Node3D" parent="Cabezal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2440457, 0.014203191, 0)
+visible = false
 
 [node name="SistemaX" type="Node3D" parent="Cabezal/varillas"]
 
@@ -348,6 +369,128 @@ transform = Transform3D(0.72188103, -0.6920172, 0, 0.6920172, 0.72188103, 0, 0, 
 mesh = SubResource("BoxMesh_11h8k")
 skeleton = NodePath("../..")
 
+[node name="varillasResta" type="Node3D" parent="Cabezal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2440457, 0.014203191, 0)
+
+[node name="SistemaX" type="Node3D" parent="Cabezal/varillasResta"]
+
+[node name="varillaX" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, -0.49027884)
+skeleton = NodePath("../..")
+
+[node name="largovarilla" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaX/varillaX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../../..")
+
+[node name="puntavarilla" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaX/varillaX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../../..")
+
+[node name="SeñalX" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaX"]
+transform = Transform3D(0.8538916, -0.51038265, 0.10187553, 0.51066536, 0.8594082, 0.025268253, -0.10044913, 0.030447932, 0.9944763, -1.4577099, -0.27706358, -0.32027143)
+mesh = SubResource("BoxMesh_d4hm8")
+skeleton = NodePath("../..")
+
+[node name="varilla señalX" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaX"]
+transform = Transform3D(0.94484085, -0.3080898, 0.11115924, 0.30780017, 0.9512367, 0.020189034, -0.1119588, 0.015139414, 0.9935975, -3.138813, -1.0401498, -0.09658936)
+mesh = SubResource("BoxMesh_xhvlk")
+
+[node name="SistemaSigQ" type="Node3D" parent="Cabezal/varillasResta"]
+
+[node name="varillaSigQ" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaSigQ"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, -1.2667937)
+skeleton = NodePath("../..")
+
+[node name="largovarilla" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaSigQ/varillaSigQ"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../../..")
+
+[node name="puntavarilla" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaSigQ/varillaSigQ"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../../..")
+
+[node name="varillaSeñalSigQ" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaSigQ"]
+transform = Transform3D(-4.371138e-08, 0, -0.9999999, 0.13133942, 0.9913375, -5.7410285e-09, 0.99133736, -0.13133942, -4.3332733e-08, 0, 0.4580518, -2.4304447)
+mesh = SubResource("BoxMesh_bvppy")
+
+[node name="varillaSigQgolpea" type="MeshInstance3D" parent="Cabezal/varillasResta/SistemaSigQ"]
+transform = Transform3D(-0.07148008, -0.997442, 0, 0.997442, -0.07148008, 0, 0, 0, 1, -0.11348128, 2.1143441, -3.6325955)
+mesh = SubResource("BoxMesh_trhmv")
+
+[node name="varillaHalt" type="MeshInstance3D" parent="Cabezal/varillasResta"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, -2.1400752)
+
+[node name="varillaH" type="MeshInstance3D" parent="Cabezal/varillasResta/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, 0.031286478, 1.1645193, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="varillaH2" type="MeshInstance3D" parent="Cabezal/varillasResta/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, 0.15028787, 0.17399788, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="varillaH3" type="MeshInstance3D" parent="Cabezal/varillasResta/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, 0.25733066, -0.7206635, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="puntaVarilla" type="MeshInstance3D" parent="Cabezal/varillasResta/varillaHalt"]
+transform = Transform3D(0.9928597, -0.119287774, 0, 0.119287774, 0.9928597, 0, 0, 0, 1, -0.031286478, 1.6853299, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../..")
+
+[node name="Sistema1" type="Node3D" parent="Cabezal/varillasResta"]
+
+[node name="varilla1" type="MeshInstance3D" parent="Cabezal/varillasResta/Sistema1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, 0.36596483)
+skeleton = NodePath("../..")
+
+[node name="largoVarilla1" type="MeshInstance3D" parent="Cabezal/varillasResta/Sistema1/varilla1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../../..")
+
+[node name="puntaVarilla1" type="MeshInstance3D" parent="Cabezal/varillasResta/Sistema1/varilla1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../../..")
+
+[node name="Señal1" type="MeshInstance3D" parent="Cabezal/varillasResta/Sistema1"]
+transform = Transform3D(0.9570011, -0.29008424, 0, 0.29008424, 0.9570011, 0, 0, 0, 1, -1.8130018, 0.03882289, 0.36280078)
+mesh = SubResource("BoxMesh_5dl7j")
+skeleton = NodePath("../..")
+
+[node name="varillaCortaSeñal1" type="MeshInstance3D" parent="Cabezal/varillasResta/Sistema1"]
+transform = Transform3D(0.9909808, -0.13400346, 0, 0.13400346, 0.9909808, 0, 0, 0, 1, -3.9501677, -0.42374387, 0.36910963)
+mesh = SubResource("BoxMesh_xhvlk")
+
+[node name="varillaSeñal1" type="MeshInstance3D" parent="Cabezal/varillasResta/Sistema1"]
+transform = Transform3D(0.8181999, 0, -0.5749339, 0, 1, 0, 0.5749339, 0, 0.8181999, -4.4452467, -0.6215496, 0.2550336)
+mesh = SubResource("BoxMesh_iwp7v")
+
+[node name="varillaL" type="MeshInstance3D" parent="Cabezal/varillasResta"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006005466, 1.2161129)
+
+[node name="largoVarilla" type="MeshInstance3D" parent="Cabezal/varillasResta/varillaL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1626465, 0)
+mesh = SubResource("CylinderMesh_trhmv")
+skeleton = NodePath("../..")
+
+[node name="puntavarilla" type="MeshInstance3D" parent="Cabezal/varillasResta/varillaL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6872026, 0)
+mesh = SubResource("CylinderMesh_tkpki")
+skeleton = NodePath("../..")
+
+[node name="señalLtirarCuerda" type="MeshInstance3D" parent="Cabezal/varillasResta/varillaL"]
+transform = Transform3D(0.72188103, -0.6920172, 0, 0.6920172, 0.72188103, 0, 0, 0, 1, -0.31891227, 0.28240263, -0.019444466)
+mesh = SubResource("BoxMesh_11h8k")
+skeleton = NodePath("../..")
+
 [node name="engranaje" type="MeshInstance3D" parent="Cabezal"]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2.7448778, -1.2504017, 0)
 mesh = SubResource("TubeTrailMesh_noarx")
@@ -383,41 +526,69 @@ transform = Transform3D(1, 0, 0, 0, -0.9999998, -8.742276e-08, 0, 8.742276e-08, 
 [node name="cilindroGrande" parent="Cabezal/cilindroEstadosSuma/cilindroEje" index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0)
 
-[node name="soportes" type="Node3D" parent="Cabezal"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.262, 4.324, -2.5)
+[node name="soportes" type="Node3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1.0000002, -1.7484561e-07, 0, 1.7484561e-07, 1.0000002, 0, -2.4983637, -4.7683716e-07)
+visible = false
 
-[node name="soporte" type="MeshInstance3D" parent="Cabezal/soportes"]
+[node name="soporte" type="MeshInstance3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande/soportes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 mesh = SubResource("CylinderMesh_5dl7j")
-skeleton = NodePath("../../cilindroEstadosSuma")
+skeleton = NodePath("../../../..")
 
-[node name="soporte2" type="MeshInstance3D" parent="Cabezal/soportes"]
+[node name="soporte2" type="MeshInstance3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande/soportes"]
 mesh = SubResource("CylinderMesh_5dl7j")
-skeleton = NodePath("../../cilindroEstadosSuma")
+skeleton = NodePath("../../../..")
 
-[node name="soporteV1" type="MeshInstance3D" parent="Cabezal/soportes"]
+[node name="soporteV1" type="MeshInstance3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande/soportes"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 5.903141, 2.3919296)
 mesh = SubResource("CylinderMesh_iwp7v")
-skeleton = NodePath("../../cilindroEstadosSuma")
+skeleton = NodePath("../../../..")
 
-[node name="union1" type="MeshInstance3D" parent="Cabezal/soportes"]
+[node name="union1" type="MeshInstance3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande/soportes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.9106264, 4.768488)
 mesh = SubResource("CylinderMesh_bvppy")
-skeleton = NodePath("../../cilindroEstadosSuma")
+skeleton = NodePath("../../../..")
 
-[node name="soporteV2" type="MeshInstance3D" parent="Cabezal/soportes"]
+[node name="soporteV2" type="MeshInstance3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande/soportes"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.84608054, 2.404285)
 mesh = SubResource("CylinderMesh_iwp7v")
-skeleton = NodePath("../../cilindroEstadosSuma")
+skeleton = NodePath("../../../..")
 
-[node name="union2" type="MeshInstance3D" parent="Cabezal/soportes"]
+[node name="union2" type="MeshInstance3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande/soportes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1623764, 4.7742934)
 mesh = SubResource("CylinderMesh_bvppy")
-skeleton = NodePath("../../cilindroEstadosSuma")
+skeleton = NodePath("../../../..")
 
-[node name="engranajeCambioEstado" type="MeshInstance3D" parent="Cabezal/soportes"]
+[node name="engranajeCambioEstado" type="MeshInstance3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande/soportes"]
 mesh = SubResource("TubeTrailMesh_d4hm8")
 surface_material_override/0 = SubResource("StandardMaterial3D_iwp7v")
+
+[node name="cilindroResta" parent="Cabezal/cilindroEstadosSuma/cilindroEje" index="1"]
+transform = Transform3D(1, 3.882351e-22, 1.6970297e-29, 0, -4.371138e-08, 1.0000001, 3.882351e-22, -1, -4.371138e-08, 0, 0, 0.3411604)
+
+[node name="q2X" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta/anilloL" index="0"]
+transform = Transform3D(1, -7.1054274e-15, 1.3069858e-15, 0, 1.0000002, 3.5527137e-15, 1.3069857e-15, 0, 1, -2.3841858e-07, -0.953609, 2.4977155)
+
+[node name="q11" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta/anilloL" index="1"]
+transform = Transform3D(0.93471444, -7.1054274e-15, 0.35540068, 0, 1.0000002, 1.0658141e-14, -0.35540068, 0, 0.9347143, -0.8566556, -0.9473516, -2.3536408)
+
+[node name="anilloX" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta" index="2"]
+transform = Transform3D(-0.5000001, 1.05879093e-22, -0.8660255, 1.4210855e-14, 1, 0, 0.8660255, 0, -0.5000001, 0, 0.8080865, 0)
+
+[node name="anilloq0" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta" index="3"]
+transform = Transform3D(0.76604456, 1.05879093e-22, 0.6427876, 0, 1, 7.1054274e-15, -0.6427876, 0, 0.76604444, 0, -0.10710159, 0)
+
+[node name="anilloq1" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta" index="4"]
+transform = Transform3D(0.17364822, 1.05879093e-22, -0.9848077, 2.842171e-14, 1, 0, 0.9848077, 0, 0.17364822, 0, -0.8489131, 0)
+
+[node name="anilloqHalt" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta" index="6"]
+transform = Transform3D(0.76604444, 1.05879093e-22, -0.64278775, 7.1054274e-15, 1, 7.1054274e-15, 0.64278775, 0, 0.7660443, 0, -1.7401794, 0)
+
+[node name="marcadorInicio" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta" index="7"]
+transform = Transform3D(1.0000001, 4.2351647e-22, -3.552714e-15, -8.4703295e-22, 1.0000001, 7.1054274e-15, -3.552714e-15, -7.1054274e-15, 1.0000001, 0, 2.8970065, 2.0003328)
+
+[node name="golpeX3" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta" index="10"]
+transform = Transform3D(0.84897715, -0.3557096, -0.3907793, 0.3864374, 0.92231566, -4.1054733e-09, 0.36042187, -0.15101175, 0.92048436, -0.8591685, -1.5202055, 2.452075)
 
 [node name="Node3D" type="Node3D" parent="Cabezal"]
 
@@ -434,5 +605,43 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.8
 mesh = SubResource("CylinderMesh_d4hm8")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_xhvlk")
+
+[node name="soportesResta" type="Node3D" parent="Cabezal"]
+transform = Transform3D(1.0000001, 4.2351647e-22, 0, 3.5527135e-15, -4.37114e-08, -1, -4.2351645e-22, 1, -4.3711385e-08, 2.262, 4.324, -2.4999995)
+
+[node name="soporte" type="MeshInstance3D" parent="Cabezal/soportesResta"]
+transform = Transform3D(1, 0, 0, -5.04871e-29, 1, -3.5527137e-15, 1.8512495e-29, 3.5527137e-15, 1, 0, 5.3585987, 4.7683716e-07)
+mesh = SubResource("CylinderMesh_dnd33")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="soporte2" type="MeshInstance3D" parent="Cabezal/soportesResta"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3782425, 0)
+mesh = SubResource("CylinderMesh_dnd33")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="soporteV1" type="MeshInstance3D" parent="Cabezal/soportesResta"]
+transform = Transform3D(1, -3.0092655e-36, 0, -5.04871e-29, -4.371139e-08, -1, 1.8512495e-29, 1, -4.371139e-08, 0, 6.737566, 2.3919296)
+mesh = SubResource("CylinderMesh_11h8k")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="union1" type="MeshInstance3D" parent="Cabezal/soportesResta"]
+transform = Transform3D(1, 0, 0, -5.04871e-29, 1, -3.5527137e-15, 1.8512495e-29, 3.5527137e-15, 1, 0, 5.3335323, 4.7684884)
+mesh = SubResource("CylinderMesh_dnd33")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="soporteV2" type="MeshInstance3D" parent="Cabezal/soportesResta"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -1.7461307, 2.4042852)
+mesh = SubResource("CylinderMesh_8g3il")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="union2" type="MeshInstance3D" parent="Cabezal/soportesResta"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.41503072, 4.7742934)
+mesh = SubResource("CylinderMesh_dnd33")
+skeleton = NodePath("../../cilindroEstadosSuma")
+
+[node name="engranajeCambioEstado" type="MeshInstance3D" parent="Cabezal/soportesResta"]
+transform = Transform3D(1, 0, 0, -5.04871e-29, 1, -3.5527137e-15, 1.8512495e-29, 3.5527137e-15, 1, 0, 0.21532631, 0)
+mesh = SubResource("CylinderMesh_nfwnr")
+surface_material_override/0 = SubResource("StandardMaterial3D_iwp7v")
 
 [editable path="Cabezal/cilindroEstadosSuma"]
