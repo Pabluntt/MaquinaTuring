@@ -525,6 +525,7 @@ transform = Transform3D(1, 0, 0, 0, -0.9999998, -8.742276e-08, 0, 8.742276e-08, 
 
 [node name="cilindroGrande" parent="Cabezal/cilindroEstadosSuma/cilindroEje" index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0)
+visible = true
 
 [node name="soportes" type="Node3D" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroGrande" index="11"]
 transform = Transform3D(1, 0, 0, 0, 1.0000002, -1.7484561e-07, 0, 1.7484561e-07, 1.0000002, 0, -2.4983637, -4.7683716e-07)
@@ -565,6 +566,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_iwp7v")
 
 [node name="cilindroResta" parent="Cabezal/cilindroEstadosSuma/cilindroEje" index="1"]
 transform = Transform3D(1, 3.882351e-22, 1.6970297e-29, 0, -4.371138e-08, 1.0000001, 3.882351e-22, -1, -4.371138e-08, 0, 0, 0.3411604)
+visible = false
 
 [node name="q2X" parent="Cabezal/cilindroEstadosSuma/cilindroEje/cilindroResta/anilloL" index="0"]
 transform = Transform3D(1, -7.1054274e-15, 1.3069858e-15, 0, 1.0000002, 3.5527137e-15, 1.3069857e-15, 0, 1, -2.3841858e-07, -0.953609, 2.4977155)
