@@ -21,7 +21,7 @@ enum ModoOperacion { SUMA, RESTA }
 @export var raycast_verde_abajo: RayCast3D
 @export var raycast_amarillo_izq: RayCast3D
 @export var contenedor_fichas: Node3D
-@export var raycast_amarillo_der: RayCast3D # <--- Volvemos a RayCast aquí
+@export var raycast_amarillo_der: RayCast3D 
 
 @export_category("--- Músculos Visuales ---")
 @export var visual_verde_1: Node3D    
@@ -63,7 +63,7 @@ func _ready():
 		print(">> MODO: SUMA (Cargando tabla y modelo...)")
 		tabla_activa = tabla_suma
 		
-		# Encendemos Suma, Apagamos Resta
+		
 		if modelo_cilindro_suma: modelo_cilindro_suma.visible = true
 		if modelo_cilindro_resta: modelo_cilindro_resta.visible = false
 		
@@ -71,7 +71,7 @@ func _ready():
 		print(">> MODO: RESTA (Cargando tabla y modelo...)")
 		tabla_activa = tabla_resta
 		
-		# Encendemos Resta, Apagamos Suma
+		
 		if modelo_cilindro_suma: modelo_cilindro_suma.visible = false
 		if modelo_cilindro_resta: modelo_cilindro_resta.visible = true
 
@@ -79,7 +79,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		procesar_avance_mecanico(delta)
 	
-	# MONITOR DE CHOQUES (Siempre activo)
+	
 	verificar_choque_topes() 
 	
 	animar_cilindro_y_palancas(delta)
@@ -110,7 +110,7 @@ func verificar_choque_topes():
 
 	# 1. Obligamos a mirar YA
 	raycast_amarillo_izq.force_raycast_update()
-	raycast_amarillo_der.force_raycast_update() # <--- AHORA FUNCIONA
+	raycast_amarillo_der.force_raycast_update() 
 	
 	var tipo_choque = "NADA"
 	
@@ -127,12 +127,11 @@ func verificar_choque_topes():
 	if tipo_choque != "NADA":
 		print(">> ¡CHOQUE DETECTADO (", tipo_choque, ")!")
 		
-		# --- CAMBIO AQUÍ: ALINEACIÓN PERFECTA ---
-		# En lugar de rebotar aleatoriamente, nos ajustamos a la rejilla exacta
+		
 		var celda_actual = round(cabezal.position.z / avance_por_vuelta)
 		cabezal.position.z = celda_actual * avance_por_vuelta
 		
-		# Ejecutamos lógica y reseteamos
+		
 		ejecutar_logica_por_choque("FIN")
 		rotacion_acumulada = 0.0
 		cooldown_choque = 0.5
@@ -190,47 +189,47 @@ func obtener_lectura_forzada() -> String:
 func modificar_cinta(valor: String):
 	var target = null
 	
-	# 1. INTENTO FÍSICO (RayCasts)
+	
 	if raycast_verde_abajo.is_colliding(): target = raycast_verde_abajo.get_collider()
 	elif raycast_verde_frente.is_colliding(): target = raycast_verde_frente.get_collider()
 	
-	# Si encontramos algo físico, buscamos su script
+	
 	if target:
-		# Buscamos el script hacia arriba (padres)
+		
 		var nodo = target
 		for i in range(4):
 			if nodo == null: break
 			if nodo.has_method("convertirse_en_uno"): 
-				target = nodo # ¡Lo encontramos!
+				target = nodo 
 				break
 			nodo = nodo.get_parent()
 			
-		# Si después de buscar no tiene el método, lo descartamos
+		
 		if not target.has_method("convertirse_en_uno"): target = null
 
-	# 2. INTENTO GPS (INFALIBLE) - Si la física falló
+	
 	if target == null and contenedor_fichas != null:
 		print(">> FÍSICA FALLÓ. USANDO GPS PARA ENCONTRAR FICHA...")
 		
 		var distancia_minima = 999.0
 		var ficha_mas_cercana = null
 		
-		# Revisamos todas las fichas de la lista
+		
 		for ficha in contenedor_fichas.get_children():
-			# Calculamos distancia en Z (solo profundidad)
+			
 			var dist = abs(ficha.global_position.z - cabezal.global_position.z)
 			
-			# Si está cerca (menos de 2 metros) es nuestra candidata
+			
 			if dist < 2.0 and dist < distancia_minima:
 				distancia_minima = dist
 				ficha_mas_cercana = ficha
 		
-		# Si encontramos una candidata válida
+		
 		if ficha_mas_cercana and ficha_mas_cercana.has_method("convertirse_en_uno"):
 			target = ficha_mas_cercana
 			print(">> GPS ENCONTRÓ: ", target.name, " a ", distancia_minima, "m")
 
-	# 3. EJECUCIÓN FINAL
+	
 	if target and target.has_method("convertirse_en_uno"):
 		print(">> ¡ÉXITO! Modificando cinta a: ", valor)
 		if valor == "1": target.convertirse_en_uno()
@@ -258,7 +257,7 @@ func configurar_animacion_palancas(tipo: String):
 
 func animar_cilindro_y_palancas(delta):
 	var offset_lectura = 0.0
-	# Usamos los RayCasts para el offset visual también
+	
 	if raycast_amarillo_izq.is_colliding() or raycast_amarillo_der.is_colliding(): offset_lectura = 20.0
 	elif raycast_verde_frente.is_colliding(): offset_lectura = 10.0
 	
